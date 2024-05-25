@@ -90,10 +90,14 @@ async function addfavorieten(callback) {
         hoofdstad: capital,
         valuta: currency
     };
-    
     let favorieten = JSON.parse(localStorage.getItem('favorieten')) || [];
+    const gekopieerdObject = { ...favorietLand };
+    let history = [...favorieten, { favorietLand: gekopieerdObject }];
+    console.log(history);
+
     favorieten.push(favorietLand);
     localStorage.setItem('favorieten', JSON.stringify(favorieten));
+    
     
     if (callback && typeof callback === 'function') {
         callback();
@@ -103,3 +107,4 @@ async function addfavorieten(callback) {
 function favorietenToegevoegd() {
     console.log('Favorieten zijn succesvol toegevoegd!');
 }
+
