@@ -83,6 +83,12 @@ input, textarea {
     line-height: 1.25em;
     margin: 1rem 0;
 }
+
+input:focus-visible,textarea:focus-visible {
+    box-shadow: 0 0 0 .1rem #606060,0 0 0 .2rem #ffffff;
+}
+
+
 p label {
     margin: 10px;
     color: #606060;
@@ -183,4 +189,37 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+
+#grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+#clear {
+    grid-column: 5/5;
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #191919;
+    width: 300px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.6s ease, visibility 0.3s ease;
+}
+
+.popup.active {
+    opacity: 1;
+    visibility: visible;
 }
