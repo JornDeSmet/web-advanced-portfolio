@@ -119,3 +119,18 @@ button {
 button:hover {
     background-color: #005f80;
 }
+
+#resultaatkader{
+    position: relative;
+    color: #ffffff;
+    font-size: 1.5em;
+    background-color: #191919;
+    width: 80%;
+    margin: 50px auto;
+    border: none;
+    border-radius: 10px;
+    color: #606060;
+    padding: .5em;
+    overflow: auto;
+    margin-bottom: 100px;
+}
