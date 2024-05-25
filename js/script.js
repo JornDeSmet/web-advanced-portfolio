@@ -72,3 +72,33 @@ async function getData(landNaam) {
 function formatteerPopulatie(populatie) {
     return populatie.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
 }
+
+let favorietenKnop = document.getElementById('knop');
+favorietenKnop.addEventListener('click', () => {
+    addfavorieten(favorietenToegevoegd);
+});
+
+async function addfavorieten(callback) {
+    const ingevoerdeLand = landInput.value;
+    const { name, population, abbreviation, capital, currency } = await getData(ingevoerdeLand);
+
+    const favorietLand = {
+        naam: name,
+        populatie: population,
+        afkorting: abbreviation,
+        hoofdstad: capital,
+        valuta: currency
+    };
+    
+    let favorieten = JSON.parse(localStorage.getItem('favorieten')) || [];
+    favorieten.push(favorietLand);
+    localStorage.setItem('favorieten', JSON.stringify(favorieten));
+    
+    if (callback && typeof callback === 'function') {
+        callback();
+    }
+}
+
+function favorietenToegevoegd() {
+    console.log('Favorieten zijn succesvol toegevoegd!');
+}
