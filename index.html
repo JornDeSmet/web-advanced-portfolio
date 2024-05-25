@@ -12,6 +12,20 @@
             <li><a href="index.html">Home</a></li>
         </ul>
     </nav>
+    <form id="form">
+        <fieldset>
+            <h1> landen zoeker</h1>
+            <p>welke informatie will je te zien krijgen<br />
+                <label><input type="checkbox" name="service" value="populatie" id="populatie">populatie</label>
+                <label> <input type="checkbox" name="service" value="hoofdstad" id="hoofdstad">hoofdstad</label>
+                <label> <input type="checkbox" name="service" value="afkorting" id="afkorting">afkorting</label>
+                <label> <input type="checkbox" name="service" value="currency" id="currency">currency</label>
+            </p>
+            <label for="land">geef een land</label><br>
+            <input type="text" name="land" id="land" placeholder="land"><br><br>
+            <button>zoek</button>
+        </fieldset>
+    </form>
     <script type="module" src="js/script.js"></script>
 </body>
 </html>

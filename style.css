@@ -71,3 +71,51 @@ a:hover:after, a:hover:before {
 	transform: scaleX(1);
 }
 
+input, textarea {
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    background: #1e1e1e;
+    color: #ffffff;
+    padding: .5em;
+    font-size: 1em;
+    caret-color:#007acc;
+    line-height: 1.25em;
+    margin: 1rem 0;
+}
+p label {
+    margin: 10px;
+    color: #606060;
+}
+
+
+fieldset {
+    background-color: #191919;
+    width: 80%;
+    margin: 50px auto;
+    border: none;
+    color: #606060;
+    border-radius: 10px;
+}
+h1 {
+    color: #ffffff;
+}
+h2 img {
+    width: 35px;
+    height: 28px;
+}
+button {
+    background-color: #5897fb;
+    color: #ffffff;
+    padding: .5em 1em;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 10px;
+    border: none;
+    outline: none;
+}
+
+button:hover {
+    background-color: #005f80;
+}
