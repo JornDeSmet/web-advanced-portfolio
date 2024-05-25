@@ -134,3 +134,44 @@ button:hover {
     overflow: auto;
     margin-bottom: 100px;
 }
+
+table {
+    width: 80%;
+    margin: 50px auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #606060;
+    border-radius: 10px;
+    overflow: hidden;
+}
+table thead {
+    color: #606060;
+
+}
+
+table td, table th {
+    padding: 10px;
+    text-align: left;
+}
+
+table tbody {
+    color: #ffffff;
+}
+
+tbody tr:nth-child(odd) td {
+    background: #191919;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
