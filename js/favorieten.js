@@ -1,3 +1,4 @@
+'use strict';
 document.addEventListener('DOMContentLoaded', () => {
     let favorieten = JSON.parse(localStorage.getItem('favorieten')) || [];
     const tabelBody = document.querySelector('#favorietenTabel tbody');

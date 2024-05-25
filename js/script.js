@@ -1,5 +1,5 @@
 'use strict';
-
+import { addToHistory } from './geschiedenis.js';
 let form = document.getElementById('form');
 let landInput = document.getElementById('land');
 let populatieCheckbox = document.getElementById('populatie');
@@ -42,6 +42,7 @@ async function submitForm(e) {
 
         resultaat.innerHTML = resultaatTekst;
         document.getElementById('knop').style.display = 'block';
+        addToHistory({ name, population, abbreviation, capital, currency, media });
 
     } else {
         resultaat.textContent = 'Gegevens niet beschikbaar voor dit land.';
